@@ -1,0 +1,90 @@
+body {margin: 0;}
+/* 左カラム */
+#left_wrap {
+	height: 650px;
+	width: 50%;
+	float: left;
+}
+/* 右カラム */
+#right_wrap {
+	height: 650px;
+	width: 50%;
+	float: left;
+}
+
+/* 上側のカラム */
+.up_column {
+	height: 400px;
+	width: 100%;
+}
+/* 下側のカラム */
+.down_column {
+	height: 250px;
+	width: 100%;
+}
+
+/* -- 分かりやすいように、４つのグループを色分けしておきます -- */
+/*#article_wrap{background: #61ffe5;}*/
+#cercle_wrap{background: #47baa7;}
+#babl_wrap{background: #139680;}
+#line_wrap{background: #3d7a70;}
+
+
+/* 月別リスト */
+#month_list {
+	margin: 10px;
+}
+.month_list li {
+	margin-top: 7px;
+	width: 100%;
+	height: 30px;
+	background: #dedede;
+	list-style: none;
+	padding: 10px;
+	line-height: 43px;
+
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-bottomleft: 10px;
+}
+#left_month_list{float: left; padding-left: 20px;}
+#right_month_list{float: left;}
+.month {
+	width: 40px;
+	height: 40px;
+	font-size: 21px;
+	float: left;
+}
+.title {
+	width: 200px;
+	height: 40px;
+	float: left;
+}
+.like {
+	width: 30px;
+	height: 30px;
+	background: #60d16d;
+	font-size: 11px;
+	float: left;
+	padding: 2px;
+	line-height: 3em;
+	text-align: center;
+	color: #fafafa;
+	position: relative;
+	top: -20px;
+	right: -35px;
+
+	-webkit-border-top-left-radius: 18px;
+	-webkit-border-top-right-radius: 18px;
+	-webkit-border-bottom-right-radius: 18px;
+	-webkit-border-bottom-left-radius: 18px;
+	-moz-border-radius-topleft: 18px;
+	-moz-border-radius-topright: 18px;
+	-moz-border-radius-bottomright: 18px;
+	-moz-border-radius-bottomleft: 18px;
+}

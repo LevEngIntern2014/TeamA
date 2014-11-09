@@ -16,12 +16,12 @@ var LinePlot = {
 	markers: null,
 	labels: null,
 	show: function () {
-		this.width = 600;
-		this.height = 400;
+		this.width = 300;
+		this.height = 200;
 		this.xPadding = 40;
 		this.yPadding = 40;
 
-		this.svg = d3.select("body").append("svg").attr("width", this.width).attr("height", this.height).attr("id", "svgTag").style("border","1px solid #eee");
+		this.svg = d3.select("#line_wrap").append("svg").attr("width", this.width).attr("height", this.height).attr("id", "svgTag").style("border","1px solid #eee");
 
 		this.xAxisScale = d3.scale.linear().domain([1,12]).range([0+this.xPadding,this.width-this.xPadding]);
 		this.yAxisScale = d3.scale.linear().domain([0,20]).range([this.height-this.yPadding,0+this.yPadding]);
@@ -61,4 +61,4 @@ var LinePlot = {
 		   
 	}
 	
-};
+}

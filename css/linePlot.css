@@ -1,0 +1,21 @@
+.axis path,
+.axis line {
+   fill: none;
+   stroke: black;
+   stroke-width: 1;
+   //shape-rendering: crispEdges;
+}
+
+.axis text {
+   font-family: sans-serif;
+   font-size: 11px;
+}
+
+.line{
+    stroke-rendering: crispEdges;
+    stroke: orange;
+    stroke-width: 2px;
+}
+#line_wrap svg {
+	background-color: white;
+}

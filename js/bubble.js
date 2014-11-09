@@ -16,7 +16,7 @@ var BubbleGraph = {
     		.padding(1.5);
 
 		$("svg").remove();
-		this.svg = d3.select("body").append("svg")
+		this.svg = d3.select("#babl_wrap").append("svg")
     		.attr("width", this.diameter)
     		.attr("height", this.diameter)
     		.attr("class", "bubble");
@@ -25,6 +25,7 @@ var BubbleGraph = {
 
 */
 ///*
+user_name="lolipop";
 var http_url = "https://teratail.com/api/";
 var query = http_url + "users/" + user_name + "/followers?limit=50&jsonp=1";
 Ayataka.getJSONP("user_follower_info", query, function (json) {

@@ -10,6 +10,38 @@
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="js/ayataka.js"></script>
 	<script type="text/javascript" src="./js/bubble.js"></script>
+	<script type="text/javascript" src="./js/linePlot.js"></script>
+	
+	<script type="text/javascript">
+		
+
+$(function () {
+	var bg = BubbleGraph;
+	
+	//$("#form").submit( function () {
+	
+		bg.show("lolipop");
+		
+	var lp = LinePlot;
+	
+	lp.show();
+/*
+		var http_url = "https://teratail.com/api/";
+		var query = http_url + "users/kinme/followers?jsonp=1";
+		Ayataka.getJSONP("user_follower_info", query, function (json) {
+			var result = "";
+
+			for (var i=0; i<json["followers"].length; i++) {
+				result = result + json["followers"][i]["display_name"];
+			}
+			$("#result").html(result);
+		});
+*/
+	//	return false;
+	//});
+});
+	
+	</script>
 </head>
 <body>
 	<!-- 左カラム -->

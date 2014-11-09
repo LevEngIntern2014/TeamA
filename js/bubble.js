@@ -6,7 +6,7 @@ var BubbleGraph = {
 	bubble: null,
 	svg: null,
 	show: function (user_name) {
-		this.diameter = 960,
+		this.diameter = 400,
 		this.format = d3.format(",d"),
     	this.color = d3.scale.category20c();
 
@@ -19,13 +19,15 @@ var BubbleGraph = {
 		this.svg = d3.select("#babl_wrap").append("svg")
     		.attr("width", this.diameter)
     		.attr("height", this.diameter)
-    		.attr("class", "bubble");
+    		.attr("class", "bubble")
+    		.style("margin-left","auto")
+    		.style("margin-right","auto")
+    		.style("text-align","center");
 /*
     	d3.json("flare.json", function(error, root) {
 
 */
 ///*
-user_name="lolipop";
 var http_url = "https://teratail.com/api/";
 var query = http_url + "users/" + user_name + "/followers?limit=50&jsonp=1";
 Ayataka.getJSONP("user_follower_info", query, function (json) {
@@ -84,28 +86,4 @@ Ayataka.getJSONP("user_follower_info", query, function (json) {
   		return {children: classes};
 	}
 			
-}
-
-$(function () {
-	var bg = BubbleGraph;
-	
-	//$("#form").submit( function () {
-	
-		bg.show("lolipop");
-/*
-		var http_url = "https://teratail.com/api/";
-		var query = http_url + "users/kinme/followers?jsonp=1";
-		Ayataka.getJSONP("user_follower_info", query, function (json) {
-			var result = "";
-
-			for (var i=0; i<json["followers"].length; i++) {
-				result = result + json["followers"][i]["display_name"];
-			}
-			$("#result").html(result);
-		});
-*/
-	//	return false;
-	//});
-
-	
-});
+};

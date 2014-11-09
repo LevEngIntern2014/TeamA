@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>テストのTeratailの１年</title>
 <link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/linePlot.css" />
 
 <script src="./js/jquery.min.js"></script>
 
@@ -11,6 +12,9 @@
 <script src="js/ayataka.js"></script>
 	<script type="text/javascript" src="./js/bubble.js"></script>
 	<script type="text/javascript" src="./js/linePlot.js"></script>
+	<script type="text/javascript" src="./js/linePlot2.js"></script>
+	<script type="text/javascript" src="./js/calendarlist.js"></script>
+	<script type="text/javascript" src="./js/pichart.js"></script>
 	
 	<script type="text/javascript">
 		
@@ -25,6 +29,9 @@ $(function () {
 	var lp = LinePlot;
 	
 	lp.show();
+	
+	var lp2 = LinePlot2;
+	lp2.show();
 /*
 		var http_url = "https://teratail.com/api/";
 		var query = http_url + "users/kinme/followers?jsonp=1";
@@ -46,82 +53,90 @@ $(function () {
 <body>
 	<!-- 左カラム -->
 	<div id="left_wrap">
+	<h1 style="font-family: 'Helvetica'; font-size: 50px;">My Tail</h1>
 		<!-- 月別記事 -->
+		<h2>　月別ベスト投稿</h2>
 		<div id="article_wrap" class="up_column">
 			<ul class="month_list" id="left_month_list">
 				<li>
 					<div class="month">1月</div>
-					<div class="title">タイトル</div>
-					<div class="like">20</div>
+					<div class="title" id="jan">タイトル</div>
+					<div class="like">15</div>
 				</li>
 				<li>
 					<div class="month">2月</div>
-					<div class="title">タイトル</div>
-					<div class="like">20</div>
+					<div class="title" id="feb">タイトル</div>
+					<div class="like">16</div>
 				</li>
 				<li>
 					<div class="month">3月</div>
-					<div class="title">タイトル</div>
-					<div class="like">20</div>
+					<div class="title" id="mar">タイトル</div>
+					<div class="like">6</div>
 				</li>
 				<li>
 					<div class="month">4月</div>
-					<div class="title">タイトル</div>
-					<div class="like">20</div>
+					<div class="title" id="apl">タイトル</div>
+					<div class="like">8</div>
 				</li>
 				<li>
 					<div class="month">5月</div>
-					<div class="title">タイトル</div>
-					<div class="like">20</div>
+					<div class="title" id="may">タイトル</div>
+					<div class="like">14</div>
 				</li>
 				<li>
 					<div class="month">6月</div>
-					<div class="title">タイトル</div>
-					<div class="like">20</div>
+					<div class="title" id="jun">タイトル</div>
+					<div class="like">23</div>
 				</li>
 			</ul>
 
 			<ul class="month_list" id="right_month_list">
 				<li>
 					<div class="month">7月</div>
-					<div class="title">タイトル</div>
+					<div class="title" id="jly">タイトル</div>
 					<div class="like">20</div>
 				</li>
 				<li>
 					<div class="month">8月</div>
-					<div class="title">タイトル</div>
-					<div class="like">20</div>
+					<div class="title" id="aug">タイトル</div>
+					<div class="like">8</div>
 				</li>
 				<li>
 					<div class="month">9月</div>
-					<div class="title">タイトル</div>
-					<div class="like">20</div>
+					<div class="title" id="sep">タイトル</div>
+					<div class="like">17</div>
 				</li>
 				<li>
 					<div class="month">10月</div>
-					<div class="title">タイトル</div>
-					<div class="like">20</div>
+					<div class="title" id="oct">タイトル</div>
+					<div class="like">10</div>
 				</li>
 				<li>
 					<div class="month">11月</div>
-					<div class="title">タイトル</div>
-					<div class="like">20</div>
+					<div class="title" id="nov">タイトル</div>
+					<div class="like">2</div>
 				</li>
 				<li>
 					<div class="month">12月</div>
-					<div class="title">タイトル</div>
-					<div class="like">20</div>
+					<div class="title" id="dic">タイトル</div>
+					<div class="like">5</div>
 				</li>
 			</ul>
 		</div>
 		<!-- 円グラフ -->
-		<div id="cercle_wrap" class="down_column"></div>
+		<h2>　質問についているタグの割合</h2>
+		<div id="cercle_wrap" class="down_column" style="margin-left: -8em;">
+		  <div id="tag_pie_chart"></div>
+		</div>
+		
+
 	</div>
 
 	<!-- 右カラム -->
 	<div id="right_wrap">
 		<!-- バブルグラフ -->
-		<div id="babl_wrap" class="up_column">
+		<h2>あなたの質問に答えてくれた人</h2>
+		<div id="babl_wrap" class="up_column" style="">
 			
 
 
@@ -129,6 +144,7 @@ $(function () {
 
 		</div>
 		<!-- 棒グラフ -->
+		<h2 style="margin-top: 4em;">月別のスコア変化　　　　　月別の回答数</h2>
 		<div id="line_wrap" class="down_column"></div>
 	</div>
 </body>

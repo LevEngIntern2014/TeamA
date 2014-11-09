@@ -29,7 +29,7 @@ user_name="lolipop";
 var http_url = "https://teratail.com/api/";
 var query = http_url + "users/" + user_name + "/followers?limit=50&jsonp=1";
 Ayataka.getJSONP("user_follower_info", query, function (json) {
-//	var result = "";
+	var result = "";
 	var root = {
 		name: "followers",
 		children: []
@@ -89,9 +89,9 @@ Ayataka.getJSONP("user_follower_info", query, function (json) {
 $(function () {
 	var bg = BubbleGraph;
 	
-	$("#form").submit( function () {
+	//$("#form").submit( function () {
 	
-		bg.show($("#txt").val());
+		bg.show("lolipop");
 /*
 		var http_url = "https://teratail.com/api/";
 		var query = http_url + "users/kinme/followers?jsonp=1";
@@ -104,8 +104,8 @@ $(function () {
 			$("#result").html(result);
 		});
 */
-		return false;
-	});
+	//	return false;
+	//});
 
 	
 });

@@ -25,9 +25,9 @@ body {margin: 0;}
 
 /* -- 分かりやすいように、４つのグループを色分けしておきます -- */
 /*#article_wrap{background: #61ffe5;}*/
-#cercle_wrap{background: #47baa7;}
-#babl_wrap{background: #139680;}
-#line_wrap{background: #3d7a70;}
+#cercle_wrap{/*background: #47baa7;*/}
+#babl_wrap{/*background: #139680;*/}
+#line_wrap{/*background: #3d7a70;*/}
 
 
 /* 月別リスト */
@@ -64,6 +64,7 @@ body {margin: 0;}
 	width: 200px;
 	height: 40px;
 	float: left;
+	overflow: hidden;
 }
 .like {
 	width: 30px;

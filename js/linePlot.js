@@ -9,12 +9,19 @@ var xAxisScale = d3.scale.linear().domain([1,12]).range([0+xPadding,width-xPaddi
 var yAxisScale = d3.scale.linear().domain([0,20]).range([height-yPadding,0+yPadding]);
 
 var xAxis = d3.svg.axis().scale(xAxisScale);
-var yAxis = d3.svg.axis().scale(yAxisScale).orient("left").ticks(1);
+var yAxis = d3.svg.axis().scale(yAxisScale).orient("left");
 
 var xAxisGroup = svg.append("g").attr("class","x axis").attr("transform", "translate(0," + (height-yPadding) + ")").call(xAxis);
 var yAxisGroup = svg.append("g").attr("class","y axis").attr("transform", "translate(" + xPadding + ",0)").call(yAxis);
 
+
+
 var points=[[1,4],[2,2],[3,5],[4,9],[5,3],[6,1],[7,5],[8,4],[9,6],[10,7],[11,23],[12,11]];
+
+
+
+
+
 
 var line=d3.svg.line().x(function(d){ return xAxisScale(d[0])}).y(function(d){return yAxisScale(d[1])});
 var path=svg.append("g").append("path").attr("id","pathEntry").datum(points).attr("class","line").attr(
